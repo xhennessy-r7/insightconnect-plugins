@@ -1,0 +1,32 @@
+plugin_spec_version: v2
+name: myip
+title: MyIP
+description: MyIP is a free service which returns your public routable IP address
+version: 1.0.0
+vendor: rapid7
+status: ["supported"]
+tags:
+- ip
+- myip
+enable_cache: false
+actions:
+  lookup:
+    title: IP Address Lookup
+    description: Obtain your public routable IP address
+    input: null
+    output:
+      ip:
+        title: IP Address
+        description: The public routable IP address
+        type: string
+        required: true
+      country:
+        title: Country
+        description: Country name
+        type: string
+        required: true
+      cc:
+        title: Country Code
+        description: Country code e.g. US
+        type: string
+        required: true
