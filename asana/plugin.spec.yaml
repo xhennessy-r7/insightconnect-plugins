@@ -1,0 +1,25 @@
+plugin_spec_version: v2
+name: asana
+title: Asana
+description: Project management
+version: 1.0.0
+vendor: rapid7
+status: ["unsupported"]
+tags:
+- projectmanagement
+connection:
+  personal_access_token:
+    title: Personal Access Token
+    description: API token to access Asana
+    type: credential_token
+    required: true
+actions:
+  get_users:
+    title: Get Users
+    description: Get users from Asana
+    output:
+      data:
+        title: Data
+        description: List of users
+        type: object
+        required: true
